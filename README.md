@@ -92,6 +92,8 @@ The backend will run on: http://localhost:5000
 pdt/
 ├── apps/
 │   ├── frontend/   # React + Vite + TS + SASS
+│   │   └── src
+│   │       └── components/ui # Basic and common components from the application, including types, styles, testing and stories by directory
 │   └── backend/    # Python + Flask + Socket.IO
 ├── pnpm-workspace.yaml
 ├── turbo.json
