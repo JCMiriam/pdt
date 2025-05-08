@@ -58,7 +58,8 @@ node-linker=hoisted
 ### 3.Run locally
 Frontend
 ```bash
-node-linker=hoisted
+cd apps/frontend
+pnpm run dev
 ```
 Access in the browser: http://localhost:5173
 
