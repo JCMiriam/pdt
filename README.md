@@ -56,14 +56,19 @@ node-linker=hoisted
 ```
 
 ### 3.Run locally
-Frontend
+#### Frontend
 ```bash
 cd apps/frontend
 pnpm run dev
 ```
 Access in the browser: http://localhost:5173
 
-Backend
+#### Storybook
+```bash
+pnpm storybook
+```
+
+#### Backend
 ```bash
 cd apps/backend
 python -m venv venv
