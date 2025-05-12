@@ -1,8 +1,11 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from 'react'
+import classNames from 'classnames'
 
-import {ButtonProps} from './types';
-import './styles.scss';
+import { Icon } from '@components/ui/IconComponent/Icon'
+import type { ButtonProps } from './types'
+
+import './styles.scss'
+
 
 const Button: React.FC<ButtonProps> = ({
     text,
@@ -31,14 +34,20 @@ const Button: React.FC<ButtonProps> = ({
             className={buttonClass}
             onClick={onClick}
             disabled={disabled || loading}
-        >
+            >
             {loading ? (
                 <span className="loader"></span>
             ) : (
                 <>
-                    {icon && (<span className={`icon icon--${iconPosition ?? 'left'}`}>{icon}</span>)}
-                    {text && <span className="text">{text}</span>}
-                    {icon && iconPosition === 'right' && <span className="icon">{icon}</span>}
+                {icon && iconPosition === 'left' && (
+                    <Icon icon={icon} size="sm" className="icon icon--left" />
+                )}
+
+                {text && <span className="text">{text}</span>}
+
+                {icon && iconPosition === 'right' && (
+                    <Icon icon={icon} size="sm" className="icon icon--right" />
+                )}
                 </>
             )}
         </button>

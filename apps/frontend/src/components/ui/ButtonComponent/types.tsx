@@ -1,4 +1,5 @@
 import React from "react";
+import { IconName } from "../IconComponent/types";
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'alert' | 'link' | 'success';
@@ -7,7 +8,7 @@ export type ButtonIconPosition = 'left' | 'right';
 
 interface BaseButtonProps {
     text?: string;
-    icon?: React.ReactNode;
+    icon?: IconName;
     iconPosition?: ButtonIconPosition;
     variant: ButtonVariant;
     style: ButtonStyle;
