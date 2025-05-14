@@ -1,0 +1,38 @@
+/* === Border === */
+$border-xs: 1px solid;
+$border-sm: 2px solid;
+$border-md: 4px solid;
+$border-lg: 8px solid;
+$border-xl: 12px solid;
+
+/* === Radius === */
+$radius-xs: 4px;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 20px;
+$radius-2xl: 24px;
+
+/* === Shadows === */
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+/* === Font Sizes === */
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+
+/* === Font Weights === */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$font-family-base: 'Roboto', sans-serif;
+$line-height-base: 1;

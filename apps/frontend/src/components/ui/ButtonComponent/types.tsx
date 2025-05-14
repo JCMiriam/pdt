@@ -2,7 +2,7 @@ import React from "react";
 import { IconName } from "../IconComponent/types";
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
-export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'alert' | 'link' | 'success';
+export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'alert' | 'success';
 export type ButtonStyle = 'solid' | 'outline' | 'link' | 'icon';
 export type ButtonIconPosition = 'left' | 'right';
 
