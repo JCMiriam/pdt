@@ -1,5 +1,5 @@
 import React from "react";
-import { IconName } from "../IconComponent/types";
+import { IconName } from "../../../types/icon";
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'alert' | 'success';

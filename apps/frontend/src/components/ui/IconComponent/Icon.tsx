@@ -1,9 +1,10 @@
-import { iconMap } from '@lib/icons'
-import type { IconName, Size } from './types'
+import { iconMap } from '@lib/icons';
+import type { IconName, Size } from '@shared-types/icon';
 
 const sizeMap: Record<Size, number> = {
-  sm: 16,
-  md: 24,
+  xs: 10,
+  sm: 12,
+  md: 16,
   lg: 32,
   xl: 48,
 }

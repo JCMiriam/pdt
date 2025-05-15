@@ -2,32 +2,48 @@
 
 .button {
     display: inline-flex;
+    gap: 6px;
     align-items: center;
     justify-content: center;
     border: none;
-    height: 40px;
-    min-width: 80px;
-
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    font-weight: $font-weight-bold;
-    
-    
-    border-radius: $radius-md;
+
 
     &.sm {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.75rem;
+        @extend %font-sm-bold;
+        border-radius: $radius-sm;
+        padding: 6px 12px;
+        min-height: 30px;
+        min-width: 30px;
+        max-height: fit-content;
+        max-width: fit-content;
+
+        .text { height: 10px }
     }
 
     &.md {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
+        @extend %font-base-bold;
+        border-radius: $radius-md;
+        min-height: 40px;
+        min-width: 40px;
+        padding: 10px 24px;
+        max-height: fit-content;
+        max-width: fit-content;
+
+        .text { height: 16px }
     }
 
     &.lg {
-        font-size: 1rem;
-        padding: 0.75rem 1.25rem;
+        @extend %font-lg-bold;
+        border-radius: $radius-md;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 10px 32px;
+        max-height: fit-content;
+        max-width: fit-content;
+
+        .text { height: 16px }
     }
 
     &.solid {
@@ -42,96 +58,97 @@
         &.secondary { 
             background-color: var(--middle-gray);
             &:hover {
-                background-color: var(--middark-gray);
+                background-color: var(--middle-light-gray);
             }
         }
         &.danger { 
             background-color: var(--red-alert);
             &:hover {
-                background-color: var(--dark-red-alert);
+                background-color: var(--light-red-alert);
             }
         }
         &.alert { 
-            background-color: var(--dark-yellow-sand);
+            background-color: var(--yellow-sand);
             &:hover {
-                background-color: var(--yellow-sand);
+                background-color: var(--light-yellow-sand);
             }
         }
         &.success { 
             background-color: var(--green-water);
             &:hover {
-                background-color: var(--dark-green-water);
+                background-color: var(--light-green-water);
             }
         }
     }
 
     &.outline {
-        border: $border-sm;
+        background-color: transparent;
 
         &.primary {
+            @include border-shadow($border-md, var(--dark-gray));
             color: var(--dark-gray);
-            border-color: var(--dark-gray);
             &:hover {
-                color: var(--middark-gray);
+                @include border-shadow($border-md, var(--middark-gray));
                 border-color: var(--middark-gray);
+                background-color: $background-middark-gray--hover;
             }
         }
+
         &.secondary {
+            @include border-shadow($border-md, var(--middle-gray));
             color: var(--middle-gray);
-            border-color: var(--middle-gray);
             &:hover {
+                @include border-shadow($border-md, var(--middle-light-gray));
                 color: var(--middark-gray);
-                border-color: var(--middark-gray);
+                background-color: $background-middle-light-gray--hover;
             }
         }
+
         &.danger {
+            @include border-shadow($border-md, var(--red-alert));
             color: var(--red-alert);
-            border-color: var(--red-alert);
             &:hover {
+                @include border-shadow($border-md, var(--light-red-alert));
                 color: var(--dark-red-alert);
-                border-color: var(--dark-red-alert);
+                background-color: $background-light-red-alert--hover;
             }
         }
+
         &.alert {
-            color: var(--dark-yellow-sand);
-            border-color: var(--dark-yellow-sand);
+            @include border-shadow($border-md, var(--yellow-sand));
+            color: var(--yellow-sand);
             &:hover {
-                color: var(--yellow-sand);
-                border-color: var(--yellow-sand);
+                @include border-shadow($border-md, var(--light-yellow-sand));
+                color: var(--dark-yellow-sand);
+                background-color: $background-light-yellow-sand--hover;
             }
         }
+
         &.success {
-            color: var(--green-water);
-            border-color: var(--green-water);
+            @include border-shadow($border-md, var(--green-water));
+            color: var(--light-green-water);
             &:hover {
+                @include border-shadow($border-md, var(--light-green-water));
                 color: var(--dark-green-water);
-                border-color: var(--dark-green-water);
+                background-color: $background-light-green-water--hover;
             }
         }
     }
 
   
-  &.icon {
-    padding: 0.5rem;
-    border-radius: 50%;
+  &.icon-only {
+    padding: 6px;
+    aspect-ratio: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.icon-round {
+    padding: 6px;
+    border-radius: 100%;
     aspect-ratio: 1;
     justify-content: center;
     align-items: center;
-
-    .text {
-      display: none;
-    }
-  }
-
-  // Iconos
-  .icon {
-    &--left {
-      margin-right: 0.5em;
-    }
-
-    &--right {
-      margin-left: 0.5em;
-    }
   }
 
   // Loader
