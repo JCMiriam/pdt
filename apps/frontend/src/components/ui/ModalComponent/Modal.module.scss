@@ -1,0 +1,50 @@
+@use '@styles/tokens' as *;
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &.transparent {
+    background-color: transparent;
+  }
+}
+
+.modalContainer {
+  background: var(--pure-white);
+  border-radius: $radius-lg;
+  position: relative;
+  min-width: 460px;
+  max-width: 500px;
+  overflow: hidden;
+
+  .modalHeader {
+    background-color: var(--primary-dark);
+    padding: 20px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-top: 0;
+}
+
+.modal-body {
+  margin-top: 1rem;
+}

@@ -1,10 +1,13 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CreateUser from './pages/CreateUser/CreateUser'
 
 function App() {
   return (
-    <>
-      <p>Hi word!</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/create-user" element={<CreateUser />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

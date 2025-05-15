@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { Icon } from '@components/ui/IconComponent/Icon'
 import type { ButtonProps as BaseButtonProps } from './types'
 
-import './styles.scss'
+import './Button.scss'
 
 type IconShape = 'default' | 'round'
 interface ButtonProps extends BaseButtonProps {
