@@ -3,7 +3,7 @@ import { IconName } from "../../../types/icon";
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'alert' | 'success';
-export type ButtonStyle = 'solid' | 'outline' | 'link' | 'icon';
+export type ButtonStyle = 'solid' | 'outline' | 'transparent' | 'icon';
 export type ButtonIconPosition = 'left' | 'right';
 
 interface BaseButtonProps {

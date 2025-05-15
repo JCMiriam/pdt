@@ -5,3 +5,8 @@ dist/
 *.tsbuildinfo
 .vscode/
 turbo/
+
+pnpm-debug.log*
+
+coverage/
+test-results/
