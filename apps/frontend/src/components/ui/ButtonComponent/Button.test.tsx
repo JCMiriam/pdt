@@ -2,11 +2,29 @@ import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import Button from './Button'
 
+const checkButtonDefaults = () => {
+  render(
+    <Button text="Defaults" variant="primary" style="solid" size="md" />
+  )
+
+  const button = screen.getByRole('button')
+
+  expect(button).toHaveAttribute('type', 'button')
+  expect(button).not.toBeDisabled()
+
+  expect(button).not.toHaveClass('icon-only')
+  expect(button).not.toHaveClass('icon-round')
+
+  expect(button.querySelector('.loader')).not.toBeInTheDocument()
+}
+
 jest.mock('@components/ui/IconComponent/Icon', () => ({
     Icon: ({ className }: { className: string }) => <span data-testid="icon" className={className} />
 }))
 
 describe('Button component', () => {
+    const sizes = ['sm', 'md', 'lg'] as const
+
     const defaultProps = {
         text: 'Click me',
         icon: 'cross',
@@ -25,9 +43,16 @@ describe('Button component', () => {
         jest.clearAllMocks()
     })
 
-    it('renders with text', () => {
-        render(<Button {...defaultProps} />)
-        expect(screen.getByText('Click me')).toBeInTheDocument()
+    it('applies default props when omitted', () => {
+        checkButtonDefaults()
+    })
+
+    sizes.forEach((size) => {
+        it(`applies size class "${size}"`, () => {
+            render(<Button text={`Size ${size}`} variant="primary" style="solid" size={size} />)
+            const button = screen.getByRole('button')
+            expect(button).toHaveClass(size)
+        })
     })
 
     it('renders with icon on the left', () => {
@@ -87,5 +112,25 @@ describe('Button component', () => {
         expect(button).toHaveClass('danger')
         expect(button).toHaveClass('outline')
         expect(button).toHaveClass('lg')
+    })
+
+    it('does not apply icon-only or icon-round when both icon and text are present', () => {
+        render(<Button {...defaultProps} />)
+        const button = screen.getByRole('button')
+        expect(button).not.toHaveClass('icon-only')
+        expect(button).not.toHaveClass('icon-round')
+    })
+
+    it('applies "md" size class by default when size is not provided', () => {
+        render(
+            <Button
+                text="Default size"
+                variant="primary"
+                style="solid"
+            />
+        )
+
+        const button = screen.getByRole('button')
+        expect(button).toHaveClass('md')
     })
 })

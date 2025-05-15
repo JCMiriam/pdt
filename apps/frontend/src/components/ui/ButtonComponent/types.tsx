@@ -12,7 +12,7 @@ interface BaseButtonProps {
     iconPosition?: ButtonIconPosition;
     variant: ButtonVariant;
     style: ButtonStyle;
-    size: ButtonSize;
+    size?: ButtonSize;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     disabled?: boolean;
     loading?: boolean;
