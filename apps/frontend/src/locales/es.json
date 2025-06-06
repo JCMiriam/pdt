@@ -1,0 +1,11 @@
+{
+    "userCreation": {
+        "gameId": "ID de la partida",
+        "username": "Nombre de usuario",
+        "writeUsername": "Escribe tu nombre de usuario",
+        "usernameWrningTitle": "¡Hey, cuidado al elegir tu nombre de usuario!",
+        "usernameWarningInfo": "Ten en cuenta que se usará para mencionarte aleatoriamente en algunas cartas, así que necesitamos que tus amigos te reconozcan... ¡No queremos que RataLujosa42 ha invadido la partida!",
+        "playButton": "¡Vamos a jugar!",
+        "editButtonAlt": "Edita tu imagen de perfil"
+    }
+}

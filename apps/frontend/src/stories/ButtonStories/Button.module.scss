@@ -1,0 +1,21 @@
+.buttonsVariantsGallery {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonsSizeGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .buttonsSizeGalleryContainer {
+        display: flex;
+
+        .buttonsSizeGalleryContent {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

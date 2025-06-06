@@ -1,0 +1,22 @@
+@use '@styles/tokens' as *;
+
+.modalHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .modalHeaderData {
+        color: var(--pure-white);
+
+        .modalHeaderInfo {
+            @extend %font-base-bold;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .modalHeaderId {
+            @extend %font-2xl-bold;
+            display: block;
+        }
+    }
+}
