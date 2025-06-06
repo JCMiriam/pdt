@@ -30,7 +30,7 @@
       "@shared-types/*": ["types/*"]
       
     },
-    "types": ["vite/client", "node", "jest"]
+    "types": ["vite/client", "node"]
   },
   "include": ["src"]
 }
