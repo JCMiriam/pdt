@@ -137,7 +137,7 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.15.17
+        specifier: ^22.15.30
         version: 22.15.30
       '@types/react':
         specifier: ^19.0.10
@@ -203,7 +203,7 @@ importers:
         specifier: ^8.26.1
         version: 8.31.1(eslint@9.26.0)(typescript@5.7.3)
       vite:
-        specifier: ^6.3.1
+        specifier: ^6.3.4
         version: 6.3.4(@types/node@22.15.30)(sass@1.87.0)
       vite-plugin-svgr:
         specifier: ^4.3.0
