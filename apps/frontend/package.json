@@ -21,7 +21,8 @@
     "react-dom": "^19.0.0",
     "react-i18next": "^15.5.1",
     "react-router-dom": "^7.6.0",
-    "sass": "^1.87.0"
+    "sass": "^1.87.0",
+    "@pdt/shared-types": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
