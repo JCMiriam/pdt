@@ -1,5 +1,6 @@
 import Logo from "@components/ui/LogoComponent/Logo";
-import Modal from "@components/ui/ModalComponent/Modal"
+import Modal from "@components/ui/ModalComponent/Modal";
+import Skeleton from "@components/ui/SkeletonComponent/Skeleton";
 import { useTranslation } from "react-i18next"
 
 import styles from './CreateUserModal.module.scss'
@@ -23,7 +24,7 @@ const CreateUserModal = () => {
 
   return (
     <Modal isOpen={true} showOverlay={false} closable={false} header={<CreateUserModalHeader />} >
-      <p>Este es un modal genérico funcional 🎉</p>
+      <Skeleton width="100%" height="2rem" variant="round" />
     </Modal>
   )
 }

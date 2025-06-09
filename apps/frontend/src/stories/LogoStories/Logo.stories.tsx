@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Logo from '@components/ui/LogoComponent/Logo'
+import style from './Logo.module.scss';
 
 const meta: Meta<typeof Logo> = {
   title: 'UI/Logo',
@@ -33,10 +34,10 @@ export const Playground: Story = {
 
 export const Gallery: Story = {
   render: () => (
-    <div style={{ display: 'grid', gap: '2rem', padding: '2rem' }}>
+    <div className={style.gridLogoContainer}>
       <div>
         <h4>Fullcolor</h4>
-        <div style={{ display: 'flex', gap: '1rem' }}>
+        <div className={style.mainLogoContainer}>
           <Logo size="sm" color="fullcolor" />
           <Logo size="md" color="fullcolor" />
           <Logo size="lg" color="fullcolor" />
@@ -45,7 +46,7 @@ export const Gallery: Story = {
 
       <div>
         <h4>Monochrome (default color)</h4>
-        <div style={{ display: 'flex', gap: '1rem' }}>
+        <div className={style.mainLogoContainer}>
           <Logo size="sm" color="monochrome" />
           <Logo size="md" color="monochrome" />
           <Logo size="lg" color="monochrome" />
@@ -54,10 +55,10 @@ export const Gallery: Story = {
 
       <div>
         <h4>Monochrome (custom color)</h4>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <Logo size="sm" color="monochrome" customColor="#EF4444" />
-          <Logo size="md" color="monochrome" customColor="#3B82F6" />
-          <Logo size="lg" color="monochrome" customColor="#10B981" />
+        <div className={style.mainLogoContainer}>
+          <Logo size="sm" color="monochrome" customColor="var(--yellow-sand)" />
+          <Logo size="md" color="monochrome" customColor="var(--red-alert)" />
+          <Logo size="lg" color="monochrome" customColor="var(--green-water)" />
         </div>
       </div>
     </div>

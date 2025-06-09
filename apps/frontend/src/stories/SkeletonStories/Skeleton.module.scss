@@ -1,0 +1,27 @@
+@use '@styles/tokens' as *;
+
+.mainSkeletonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeletonCardContainer {
+    display: flex;
+    gap: 16px;
+
+    .skeletonCard {
+        flex: 1;
+        padding: 16px;
+        border-radius: $radius-md;
+        background: var(--pure-white);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &.skeletonCardDark {
+            background: var(--primary-dark);
+        }
+    }
+}
+
