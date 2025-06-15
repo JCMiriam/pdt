@@ -1,0 +1,14 @@
+.gridModalContainer {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    max-width: 600px;
+}
+
+.mainModalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    max-width: 600px;
+}

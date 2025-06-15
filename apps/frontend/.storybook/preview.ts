@@ -1,14 +1,26 @@
 import type { Preview } from '@storybook/react'
+import '@styles/main.scss'
 
 const preview: Preview = {
   parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
-      },
+    backgrounds: {
+      default: 'midlight',
+      values: [
+        {
+          name: 'midlight',
+          value: 'var(--midlight-gray)',
+        },
+        {
+          name: 'white',
+          value: '#ffffff',
+        },
+        {
+          name: 'dark',
+          value: '#121212',
+        },
+      ],
     },
   },
-};
+}
 
-export default preview;
+export default preview

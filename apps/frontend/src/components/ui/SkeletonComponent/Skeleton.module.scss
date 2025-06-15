@@ -1,0 +1,31 @@
+@use '@styles/tokens' as *;
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton {
+    box-shadow: $shadow-md;
+    background: linear-gradient(
+        120deg,
+        var(--midlight-gray) 25%,
+        var(--light-gray) 50%,
+        var(--midlight-gray) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+    display: inline-block;
+}
+
+.square {
+    border-radius: $radius-md;
+}
+
+.round {
+    border-radius: 9999px;
+}
