@@ -174,4 +174,4 @@ pdt/
 ---
 
 ## 🛠️ License
-MIT © 2025 — Created by [Guaiman94](https://github.com/Guaiman94) & [JCMiriam](https://github.com/JCMiriam)
+MIT © 2025
