@@ -13,6 +13,7 @@ PDT is a turn-based multiplayer card game inspired by â€œCards Against Humanityâ
   - Vite
   - SASS
   - Socket.IO Client
+  - Jest (unit testing)
 
 - **Backend:**
   - Node.js
@@ -43,7 +44,7 @@ PDT is a turn-based multiplayer card game inspired by â€œCards Against Humanityâ
 ### 1. Clone the repository
 
 ```bash
-git clone --githubProjectUrl
+git clone https://github.com/JCMiriam/pdt-presi-de-turno.git
 ```
 
 ### 2. Install dependencies
