@@ -105,7 +105,7 @@ Output in:
 #### Backend
 API documentation (Swagger UI):
 Once the backend is running, access the auto-generated API docs:
-➜ http://localhost:4000/docs
+➜ http://localhost:4000/api/docs
 
 ---
 

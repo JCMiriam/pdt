@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { Icon } from './Icon'
+import { Icon } from '../Icon'
 import type { IconName } from '@shared-types/icon'
 
 jest.mock('@lib/icons', () => {
